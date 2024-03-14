@@ -17,22 +17,63 @@
       <section>
         <h2>Contactanos</h2>
         <form action="mailto:mail@mail.com" method="POST">
-            <div>
-                <label>Nombre</label>
-                <input type="text" name="nombre">
-                
-                <!-- <label>Contraseña</label>
-                <input type="password" name="password"> -->     
-            </div>
-            <div>
-                <label>Email</label>
-                <input type="email" name="Email">
-            </div>
-            <div>
-                <input type="submit" value="Contactanos"></input>
-            </div>
-        </form>
+          <div>
+            <label>Nombre</label>
+            <input type="text" name="nombre" />
 
+            <!-- <label>Contraseña</label>
+                <input type="password" name="password"> -->
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="Email" required/>
+          </div>
+          <div>
+            <label>Selecciona el asunto</label>
+            <select name="asunto">
+                <option value="consulta">Consulta</option>
+                <option value="reclamo">Reclamo</option>
+                <label>Selecciona el asunto</label>
+            </select>
+          </div>
+          <div>
+            <input type="date" name="fecha" >
+          </div>
+          <div>
+                <input type="checkbox" name="news" value="acepta" checked>Aceptas recibir noticias?
+            </div>
+          <div>
+            <label>Género</label>
+            <input type="radio" name="masculino" value="masculino">Masculino
+            <input type="radio" name="femenino" value="femenino">Femenino
+          </div>
+          <div>
+            <label>Mensaje</label>
+            <textarea name="mensaje" maxlength="10">Escribe tu mensaje...</textarea>
+          </div>
+          <div>
+            <input type="submit" value="Contactanos" />
+          </div>
+        </form>
+      </section>
+      <section>
+        <h2>Login</h2>
+        <form action="mailto:mail@mail.com" method="POST">
+          <div>
+            <label>Nombre de usuario</label>
+            <input type="text" name="nombre_usuario" />
+
+            <!-- <label>Contraseña</label>
+                <input type="password" name="password"> -->
+          </div>
+          <div>
+            <label>Contraseña</label>
+            <input type="password" name="password_usuarios" />
+          </div>
+          <div>
+            <input type="submit" value="Hacer Login" />
+          </div>
+        </form>
       </section>
     </main>
   </body>
