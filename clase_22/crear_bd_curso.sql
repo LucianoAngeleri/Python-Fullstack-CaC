@@ -1,0 +1,1 @@
+CREATE DATABASE `curso-24165`;
