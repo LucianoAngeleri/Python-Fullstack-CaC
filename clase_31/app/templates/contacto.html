@@ -9,10 +9,26 @@
 <body>
     <h1>{{ title }}</h1>
 
-    <div class="users">        
+    <div class="personas">        
         <ul>
-            {% for user in users %}
-            <li>{{ user }}</li>
+            {% for persona in personas %}
+            <li>
+                <ul>
+                    <li>
+                        Nombre:{{ persona.nombre }}
+                    </li>
+                    <li>
+                        Puesto:{{ persona.puesto }}
+                    </li>
+                    <li>
+                        Linkedin:{{ persona.linkedin }}
+                    </li>
+                    <li>
+                        Email:{{ persona.email }}
+                    </li>
+                </ul>
+                <hr>
+            </li>
             {% endfor %}
         </ul>
     </div>

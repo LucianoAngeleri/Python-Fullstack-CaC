@@ -12,3 +12,5 @@
 /clase_31/instance/
 /clase_31/*.log
 /clase_31/*.sqlite3
+
+__pycache__

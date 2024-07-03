@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from data import personas
 
 app = Flask(__name__)
 
@@ -15,9 +16,9 @@ def hello_world():
 def cargarContacto():
     title ="Contacto"
 
-    users = ["Marcelo","Manuel","Stephanie","Miguel","Marisa","Julian"]
+    
 
-    return render_template("contacto.html", title=title, users=users)
+    return render_template("contacto.html", title=title, personas=personas)
 
 @app.route("/tienda")
 def cargarTienda():
