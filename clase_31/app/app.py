@@ -14,7 +14,11 @@ def hello_world():
 @app.route("/contacto")
 def cargarContacto():
     title ="Contacto"
-    return render_template("contacto.html", title=title)
+
+    users = ["Marcelo","Manuel","Stephanie","Miguel","Marisa","Julian"]
+
+    return render_template("contacto.html", title=title, users=users)
+
 @app.route("/tienda")
 def cargarTienda():
     title ="Tienda"
