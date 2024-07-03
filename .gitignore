@@ -1,0 +1,14 @@
+# Ignorar el entorno virtual
+/clase_31/venv/
+/clase_31/env/
+/clase_31/.venv/
+/clase_31/.env/
+
+# Ignorar archivos específicos dentro de clase_31
+/clase_31/__pycache__/
+/clase_31/*.pyc
+/clase_31/*.pyo
+/clase_31/.DS_Store
+/clase_31/instance/
+/clase_31/*.log
+/clase_31/*.sqlite3
