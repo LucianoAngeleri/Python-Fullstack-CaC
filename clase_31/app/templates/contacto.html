@@ -1,37 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
-    <title>{{ title }}</title>
-</head>
+{% include "default/head.html" %}
 <body>
+    {% include "default/header.html" %}
+
     <h1>{{ title }}</h1>
 
-    <div class="personas">        
+    <div class="users">        
         <ul>
-            {% for persona in personas %}
+            {% for user in users %}
             <li>
-                <ul>
-                    <li>
-                        Nombre:{{ persona.nombre }}
-                    </li>
-                    <li>
-                        Puesto:{{ persona.puesto }}
-                    </li>
-                    <li>
-                        Linkedin:{{ persona.linkedin }}
-                    </li>
-                    <li>
-                        Email:{{ persona.email }}
-                    </li>
-                </ul>
+                {{ user }}
                 <hr>
             </li>
             {% endfor %}
         </ul>
     </div>
-    <a href="/">Volver al Home</a>
+    {% include "default/scriptsjs.html" %}
 </body>
 </html>

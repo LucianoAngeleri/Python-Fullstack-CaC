@@ -7,18 +7,24 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     title = "Home"
-    saludo = "Hola Mundo desde Flask!"
     # return saludo
-    return render_template("home.html", saludo=saludo, title=title)
+    return render_template("home.html", title=title)
 
 
 @app.route("/contacto")
 def cargarContacto():
     title ="Contacto"
+    users = ["Marcelo","Emanuel","Stephanie","Miguel","Marisa","Julian"]
+    return render_template("contacto.html", title=title, users=users)
 
-    
-
-    return render_template("contacto.html", title=title, personas=personas)
+@app.route("/staff")
+def cargarStaff():
+    title ="Staff"
+    return render_template("staff.html", title=title, personas=personas)
+@app.route("/staff/<int:id>")
+def cargarPersona(id):
+    title ="Persona"
+    return render_template("persona.html", title=title, persona=personas[id])
 
 @app.route("/tienda")
 def cargarTienda():
