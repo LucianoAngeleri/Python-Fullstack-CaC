@@ -3,27 +3,15 @@
 #Importar pymysql / SQLalchemy / dbmysql
 import pymysql
 
+from dotenv import load_dotenv
+import os
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
 #Conectar con el servidor MySQL
-def conectarMySQL():
+def conectar_mysql():
     #Datos sensibles, debemos utilizar variables de entorno
-    host="localhost"
-    user="root"
-    password="admin1234"
-    db="tienda_py"
+    host = os.getenv('DB_HOST')
+    user = os.getenv('DB_USER')
+    password = os.getenv('DB_PASSWORD')
+    db = os.getenv('DB_NAME')
     return pymysql.connect(host=host,user=user,password=password,database=db)
-
-#GET OBTENER productos
-def obtenerProductos():
-    #Conexión a MySQL
-    conexion = conectarMySQL()
-    # Creamos una variable para almacenar los productos
-    productos = []
-    #Consulta
-    with conexion.cursor() as cursor:
-        sql = "SELECT * FROM `productos`"
-        cursor.execute(sql)
-        productos = cursor.fetchall();
-    #Devolvemos el resultado de la consulta
-    return productos
-
-#CRUD Create / Read / Update / Delete

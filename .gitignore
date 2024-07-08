@@ -6,6 +6,7 @@
 
 # Ignorar archivos específicos dentro de clase_31
 /clase_31/__pycache__/
+clase_31/app/__pycache__
 /clase_31/*.pyc
 /clase_31/*.pyo
 /clase_31/.DS_Store
@@ -14,3 +15,5 @@
 /clase_31/*.sqlite3
 
 __pycache__
+
+.env
